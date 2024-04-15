@@ -1,3 +1,7 @@
+const router = require("express").Router();
+const { Workspace, User } = require("../../models");
+const nodemailer = require("nodemailer");
+
 // Routes
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -57,3 +61,5 @@ app.delete('/api/notes/:id', (req, res) => {
     }
   });
 });
+
+module.exports = router;
